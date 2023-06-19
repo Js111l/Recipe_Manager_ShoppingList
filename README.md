@@ -37,7 +37,7 @@ https://shopping-list-api-yglz.onrender.com/swagger-ui-doc.html
 ## Setup
 
 API is running on server so in order to access the api you can simply refer to the url:
-https://shopping-list-api-yglz.onrender.com/recipes
+https://shopping-list-api-yglz.onrender.com/shoppinglists
 and apply your specified http method and params.
 
 In order to get information about total number of requests refer to the url:
