@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2023-06-19T21:51:30" hostname="LAPTOP" time="35.006">
+<testsuite name="com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2023-06-19T22:05:16" hostname="LAPTOP" time="37.03">
   <properties/>
-  <testcase name="deleteShoppingList_inValidId_statusNotFound()" classname="com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest" time="4.832"/>
-  <testcase name="getShoppingListEntitiesById_invalidId_statusNotFound()" classname="com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest" time="2.422"/>
-  <testcase name="updateShoppingList_properEntityWithInvalidId_statusNotFound()" classname="com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest" time="4.074"/>
-  <testcase name="updateShoppingList_properEntityWithValidId_properlyUpdatedResource()" classname="com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest" time="2.465"/>
-  <testcase name="createShoppingList_properEntity_properlySavedResource()" classname="com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest" time="2.374"/>
-  <testcase name="getShoppingListEntitiesById_validId_properShoppingListEntity()" classname="com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest" time="2.242"/>
-  <testcase name="deleteShoppingList_validId_properlyDeletedResource()" classname="com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest" time="2.333"/>
-  <testcase name="getShoppingListEntities()" classname="com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest" time="2.885"/>
-  <system-out><![CDATA[23:51:13.035 [Test worker] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
-23:51:13.826 [Test worker] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
-23:51:14.254 [Test worker] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
-23:51:14.256 [Test worker] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
-23:51:14.284 [Test worker] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  <testcase name="deleteShoppingList_inValidId_statusNotFound()" classname="com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest" time="5.094"/>
+  <testcase name="getShoppingListEntitiesById_invalidId_statusNotFound()" classname="com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest" time="3.995"/>
+  <testcase name="updateShoppingList_properEntityWithInvalidId_statusNotFound()" classname="com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest" time="3.327"/>
+  <testcase name="updateShoppingList_properEntityWithValidId_properlyUpdatedResource()" classname="com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest" time="2.553"/>
+  <testcase name="createShoppingList_properEntity_properlySavedResource()" classname="com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest" time="2.383"/>
+  <testcase name="getShoppingListEntitiesById_validId_properShoppingListEntity()" classname="com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest" time="2.423"/>
+  <testcase name="deleteShoppingList_validId_properlyDeletedResource()" classname="com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest" time="2.31"/>
+  <testcase name="getShoppingListEntities()" classname="com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest" time="2.587"/>
+  <system-out><![CDATA[00:04:49.458 [Test worker] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+00:04:50.065 [Test worker] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+00:04:51.067 [Test worker] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+00:04:51.075 [Test worker] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+00:04:51.162 [Test worker] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
   Server Version: 24.0.2
   API Version: 1.43
   Operating System: Docker Desktop
   Total Memory: 3837 MB
-23:51:14.320 [Test worker] INFO tc.testcontainers/ryuk:0.4.0 -- Creating container for image: testcontainers/ryuk:0.4.0
-23:51:14.603 [Test worker] INFO org.testcontainers.utility.RegistryAuthLocator -- Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
-23:51:15.188 [Test worker] INFO tc.testcontainers/ryuk:0.4.0 -- Container testcontainers/ryuk:0.4.0 is starting: 2140ab589ae71fba2b076e036902c359861ee00238c4b7956ac0c7d33d6203bf
-23:51:15.914 [Test worker] INFO tc.testcontainers/ryuk:0.4.0 -- Container testcontainers/ryuk:0.4.0 started in PT1.6179223S
-23:51:15.928 [Test worker] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
-23:51:15.928 [Test worker] INFO org.testcontainers.DockerClientFactory -- Checking the system...
-23:51:15.929 [Test worker] INFO org.testcontainers.DockerClientFactory -- ?? Docker server version should be at least 1.6.0
-23:51:15.929 [Test worker] INFO tc.postgres:latest -- Creating container for image: postgres:latest
-23:51:16.448 [Test worker] INFO tc.postgres:latest -- Container postgres:latest is starting: 2c55908385421111b36b1c5313720554b462945d2806333572caf9b4887cc28f
-23:51:20.366 [Test worker] INFO tc.postgres:latest -- Container postgres:latest started in PT4.4366884S
-23:51:20.368 [Test worker] INFO tc.postgres:latest -- Container is started (JDBC URL: jdbc:postgresql://localhost:50974/test?loggerLevel=OFF)
-23:51:20.502 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest]: ShoppingListControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-23:51:20.677 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.softwareminds.shoppinglistservice.ShoppingListServiceApplication for test class com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest
+00:04:51.515 [Test worker] INFO tc.testcontainers/ryuk:0.4.0 -- Creating container for image: testcontainers/ryuk:0.4.0
+00:04:53.932 [Test worker] INFO org.testcontainers.utility.RegistryAuthLocator -- Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+00:04:55.608 [Test worker] INFO tc.testcontainers/ryuk:0.4.0 -- Container testcontainers/ryuk:0.4.0 is starting: f4b9e271635f040ba93e11a5622a806c06aaa3c3d0f3b454865b5ed81b75f313
+00:04:56.654 [Test worker] INFO tc.testcontainers/ryuk:0.4.0 -- Container testcontainers/ryuk:0.4.0 started in PT5.4640119S
+00:04:56.665 [Test worker] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+00:04:56.666 [Test worker] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+00:04:56.667 [Test worker] INFO org.testcontainers.DockerClientFactory -- ?? Docker server version should be at least 1.6.0
+00:04:56.668 [Test worker] INFO tc.postgres:latest -- Creating container for image: postgres:latest
+00:04:56.898 [Test worker] INFO tc.postgres:latest -- Container postgres:latest is starting: 6addd11faf61b323ae42772a7222dc8e49b826acf85fe616e65f5ef924443a1e
+00:05:01.507 [Test worker] INFO tc.postgres:latest -- Container postgres:latest started in PT4.8399912S
+00:05:01.509 [Test worker] INFO tc.postgres:latest -- Container is started (JDBC URL: jdbc:postgresql://localhost:59093/test?loggerLevel=OFF)
+00:05:01.707 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest]: ShoppingListControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+00:05:01.973 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.softwareminds.shoppinglistservice.ShoppingListServiceApplication for test class com.softwareminds.shoppinglistservice.controller.ShoppingListControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -40,47 +40,47 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.0)
 
-2023-06-19T23:51:21.364+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Starting ShoppingListControllerTest using Java 17.0.6 with PID 22892 (started by kubas in C:\shoppinglistservice)
-2023-06-19T23:51:21.366+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : No active profile set, falling back to 1 default profile: "default"
-2023-06-19T23:51:22.906+02:00  INFO 22892 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-06-19T23:51:23.116+02:00  INFO 22892 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 199 ms. Found 1 JPA repository interfaces.
-2023-06-19T23:51:23.928+02:00  INFO 22892 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-06-19T23:51:23.939+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-06-19T23:51:23.939+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
-2023-06-19T23:51:24.098+02:00  INFO 22892 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-06-19T23:51:24.100+02:00  INFO 22892 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2695 ms
-2023-06-19T23:51:24.412+02:00  INFO 22892 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-06-19T23:51:24.518+02:00  INFO 22892 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
-2023-06-19T23:51:24.521+02:00  INFO 22892 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-06-19T23:51:24.777+02:00  INFO 22892 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-06-19T23:51:25.016+02:00  INFO 22892 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-06-19T23:51:25.045+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-06-19T23:51:25.744+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@811d8d6
-2023-06-19T23:51:25.748+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-06-19T23:51:25.859+02:00  INFO 22892 --- [    Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@3c862522
-2023-06-19T23:51:26.383+02:00  INFO 22892 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-06-19T23:51:27.635+02:00  INFO 22892 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-06-19T23:51:27.681+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:27.681+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "shopping_list_entity_elements" does not exist, skipping
-2023-06-19T23:51:27.705+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:27.706+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity" does not exist, skipping
-2023-06-19T23:51:27.730+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:27.730+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity_elements" does not exist, skipping
-2023-06-19T23:51:27.835+02:00  INFO 22892 --- [    Test worker] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
-2023-06-19T23:51:27.841+02:00  INFO 22892 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-06-19T23:51:28.645+02:00  WARN 22892 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-06-19T23:51:29.525+02:00  INFO 22892 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-06-19T23:51:29.713+02:00  INFO 22892 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 51001 (http) with context path ''
-2023-06-19T23:51:29.755+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Started ShoppingListControllerTest in 8.825 seconds (process running for 18.385)
-2023-06-19T23:51:32.504+02:00  INFO 22892 --- [o-auto-1-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-06-19T23:51:32.505+02:00  INFO 22892 --- [o-auto-1-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-06-19T23:51:32.507+02:00  INFO 22892 --- [o-auto-1-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-06-19T23:51:32.799+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-06-19T23:51:32.802+02:00  INFO 22892 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-06-19T23:51:34.927+02:00  INFO 22892 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-06-19T23:51:34.928+02:00  INFO 22892 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2023-06-19T23:51:34.950+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-06-19T23:51:34.959+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-20T00:05:03.023+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Starting ShoppingListControllerTest using Java 17.0.6 with PID 9240 (started by kubas in C:\shoppinglistservice)
+2023-06-20T00:05:03.028+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2023-06-20T00:05:04.907+02:00  INFO 9240 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-20T00:05:05.173+02:00  INFO 9240 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 251 ms. Found 1 JPA repository interfaces.
+2023-06-20T00:05:08.086+02:00  INFO 9240 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-20T00:05:08.108+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-20T00:05:08.109+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-20T00:05:08.358+02:00  INFO 9240 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-20T00:05:08.361+02:00  INFO 9240 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5281 ms
+2023-06-20T00:05:08.877+02:00  INFO 9240 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-20T00:05:09.030+02:00  INFO 9240 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-20T00:05:09.039+02:00  INFO 9240 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-06-20T00:05:09.382+02:00  INFO 9240 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-06-20T00:05:09.688+02:00  INFO 9240 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-20T00:05:09.724+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-20T00:05:10.108+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4e553d60
+2023-06-20T00:05:10.113+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-20T00:05:10.229+02:00  INFO 9240 --- [    Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@5cea47a1
+2023-06-20T00:05:10.799+02:00  INFO 9240 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-06-20T00:05:12.953+02:00  INFO 9240 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-20T00:05:13.057+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:13.058+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "shopping_list_entity_elements" does not exist, skipping
+2023-06-20T00:05:13.097+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:13.097+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity" does not exist, skipping
+2023-06-20T00:05:13.100+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:13.101+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity_elements" does not exist, skipping
+2023-06-20T00:05:13.309+02:00  INFO 9240 --- [    Test worker] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+2023-06-20T00:05:13.315+02:00  INFO 9240 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T00:05:14.672+02:00  WARN 9240 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-20T00:05:15.557+02:00  INFO 9240 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-20T00:05:15.721+02:00  INFO 9240 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 59155 (http) with context path ''
+2023-06-20T00:05:15.748+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Started ShoppingListControllerTest in 13.431 seconds (process running for 28.696)
+2023-06-20T00:05:18.701+02:00  INFO 9240 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-20T00:05:18.702+02:00  INFO 9240 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-20T00:05:18.704+02:00  INFO 9240 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-20T00:05:19.070+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-20T00:05:19.073+02:00  INFO 9240 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-20T00:05:21.194+02:00  INFO 9240 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T00:05:21.194+02:00  INFO 9240 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-06-20T00:05:21.213+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-20T00:05:21.222+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -90,45 +90,45 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.0)
 
-2023-06-19T23:51:35.055+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Starting ShoppingListControllerTest using Java 17.0.6 with PID 22892 (started by kubas in C:\shoppinglistservice)
-2023-06-19T23:51:35.056+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : No active profile set, falling back to 1 default profile: "default"
-2023-06-19T23:51:35.380+02:00  INFO 22892 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-06-19T23:51:35.393+02:00  INFO 22892 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interfaces.
-2023-06-19T23:51:35.470+02:00  INFO 22892 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-06-19T23:51:35.471+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-06-19T23:51:35.472+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
-2023-06-19T23:51:35.538+02:00  INFO 22892 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-06-19T23:51:35.539+02:00  INFO 22892 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 477 ms
-2023-06-19T23:51:35.680+02:00  INFO 22892 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-06-19T23:51:35.706+02:00  INFO 22892 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-06-19T23:51:35.707+02:00  INFO 22892 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-06-19T23:51:35.711+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2023-06-19T23:51:35.767+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@5bcc2416
-2023-06-19T23:51:35.767+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2023-06-19T23:51:35.784+02:00  INFO 22892 --- [    Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@61b2ca5a
-2023-06-19T23:51:35.803+02:00  INFO 22892 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-06-19T23:51:35.830+02:00  INFO 22892 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-06-19T23:51:35.844+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:35.845+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "shopping_list_entity_elements" does not exist, skipping
-2023-06-19T23:51:35.848+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:35.848+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity" does not exist, skipping
-2023-06-19T23:51:35.850+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:35.850+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity_elements" does not exist, skipping
-2023-06-19T23:51:35.864+02:00  INFO 22892 --- [    Test worker] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
-2023-06-19T23:51:35.864+02:00  INFO 22892 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-06-19T23:51:36.034+02:00  WARN 22892 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-06-19T23:51:36.316+02:00  INFO 22892 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-06-19T23:51:36.358+02:00  INFO 22892 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 51020 (http) with context path ''
-2023-06-19T23:51:36.370+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Started ShoppingListControllerTest in 1.376 seconds (process running for 25.0)
-2023-06-19T23:51:36.513+02:00  INFO 22892 --- [o-auto-2-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-06-19T23:51:36.513+02:00  INFO 22892 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-06-19T23:51:36.514+02:00  INFO 22892 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-06-19T23:51:36.710+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-06-19T23:51:36.711+02:00  INFO 22892 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-06-19T23:51:38.779+02:00  INFO 22892 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-06-19T23:51:38.780+02:00  INFO 22892 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2023-06-19T23:51:38.790+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2023-06-19T23:51:38.800+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-06-20T00:05:21.303+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Starting ShoppingListControllerTest using Java 17.0.6 with PID 9240 (started by kubas in C:\shoppinglistservice)
+2023-06-20T00:05:21.304+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2023-06-20T00:05:22.173+02:00  INFO 9240 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-20T00:05:22.192+02:00  INFO 9240 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interfaces.
+2023-06-20T00:05:22.372+02:00  INFO 9240 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-20T00:05:22.374+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-20T00:05:22.375+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-20T00:05:22.522+02:00  INFO 9240 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-20T00:05:22.523+02:00  INFO 9240 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1215 ms
+2023-06-20T00:05:22.736+02:00  INFO 9240 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-20T00:05:22.772+02:00  INFO 9240 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-06-20T00:05:22.773+02:00  INFO 9240 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-20T00:05:22.779+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-06-20T00:05:22.855+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@281c8eda
+2023-06-20T00:05:22.855+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-06-20T00:05:22.874+02:00  INFO 9240 --- [    Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@e700641
+2023-06-20T00:05:22.913+02:00  INFO 9240 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-06-20T00:05:22.964+02:00  INFO 9240 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-20T00:05:22.985+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:22.985+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "shopping_list_entity_elements" does not exist, skipping
+2023-06-20T00:05:22.991+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:22.992+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity" does not exist, skipping
+2023-06-20T00:05:22.997+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:22.998+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity_elements" does not exist, skipping
+2023-06-20T00:05:23.229+02:00  INFO 9240 --- [    Test worker] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+2023-06-20T00:05:23.230+02:00  INFO 9240 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T00:05:23.468+02:00  WARN 9240 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-20T00:05:24.255+02:00  INFO 9240 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-20T00:05:24.357+02:00  INFO 9240 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 59187 (http) with context path ''
+2023-06-20T00:05:24.384+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Started ShoppingListControllerTest in 3.144 seconds (process running for 37.333)
+2023-06-20T00:05:25.664+02:00  INFO 9240 --- [o-auto-2-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-20T00:05:25.664+02:00  INFO 9240 --- [o-auto-2-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-20T00:05:25.666+02:00  INFO 9240 --- [o-auto-2-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-20T00:05:26.103+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-20T00:05:26.104+02:00  INFO 9240 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-20T00:05:28.158+02:00  INFO 9240 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T00:05:28.158+02:00  INFO 9240 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-06-20T00:05:28.384+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-06-20T00:05:28.390+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -138,45 +138,45 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.0)
 
-2023-06-19T23:51:38.848+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Starting ShoppingListControllerTest using Java 17.0.6 with PID 22892 (started by kubas in C:\shoppinglistservice)
-2023-06-19T23:51:38.848+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : No active profile set, falling back to 1 default profile: "default"
-2023-06-19T23:51:39.504+02:00  INFO 22892 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-06-19T23:51:39.530+02:00  INFO 22892 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interfaces.
-2023-06-19T23:51:39.735+02:00  INFO 22892 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-06-19T23:51:39.736+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-06-19T23:51:39.737+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
-2023-06-19T23:51:39.824+02:00  INFO 22892 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-06-19T23:51:39.824+02:00  INFO 22892 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 972 ms
-2023-06-19T23:51:39.920+02:00  INFO 22892 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-06-19T23:51:39.931+02:00  INFO 22892 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-06-19T23:51:39.932+02:00  INFO 22892 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-06-19T23:51:39.935+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2023-06-19T23:51:40.010+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@504862b5
-2023-06-19T23:51:40.010+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2023-06-19T23:51:40.108+02:00  INFO 22892 --- [    Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@622168f7
-2023-06-19T23:51:40.125+02:00  INFO 22892 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-06-19T23:51:40.157+02:00  INFO 22892 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-06-19T23:51:40.160+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:40.160+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "shopping_list_entity_elements" does not exist, skipping
-2023-06-19T23:51:40.175+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:40.175+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity" does not exist, skipping
-2023-06-19T23:51:40.178+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:40.178+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity_elements" does not exist, skipping
-2023-06-19T23:51:40.227+02:00  INFO 22892 --- [    Test worker] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
-2023-06-19T23:51:40.227+02:00  INFO 22892 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-06-19T23:51:40.363+02:00  WARN 22892 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-06-19T23:51:40.594+02:00  INFO 22892 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-06-19T23:51:40.636+02:00  INFO 22892 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 51045 (http) with context path ''
-2023-06-19T23:51:40.647+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Started ShoppingListControllerTest in 1.842 seconds (process running for 29.276)
-2023-06-19T23:51:41.210+02:00  INFO 22892 --- [o-auto-3-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-06-19T23:51:41.210+02:00  INFO 22892 --- [o-auto-3-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-06-19T23:51:41.212+02:00  INFO 22892 --- [o-auto-3-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-06-19T23:51:41.363+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-06-19T23:51:41.364+02:00  INFO 22892 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-06-19T23:51:44.186+02:00  INFO 22892 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-06-19T23:51:44.187+02:00  INFO 22892 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2023-06-19T23:51:44.572+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2023-06-19T23:51:44.726+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-06-20T00:05:28.452+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Starting ShoppingListControllerTest using Java 17.0.6 with PID 9240 (started by kubas in C:\shoppinglistservice)
+2023-06-20T00:05:28.453+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2023-06-20T00:05:28.996+02:00  INFO 9240 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-20T00:05:29.011+02:00  INFO 9240 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interfaces.
+2023-06-20T00:05:29.132+02:00  INFO 9240 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-20T00:05:29.134+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-20T00:05:29.134+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-20T00:05:29.239+02:00  INFO 9240 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-20T00:05:29.240+02:00  INFO 9240 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 783 ms
+2023-06-20T00:05:29.353+02:00  INFO 9240 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-20T00:05:29.370+02:00  INFO 9240 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-06-20T00:05:29.370+02:00  INFO 9240 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-20T00:05:29.373+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-06-20T00:05:29.464+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@3c06d119
+2023-06-20T00:05:29.465+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-06-20T00:05:29.474+02:00  INFO 9240 --- [    Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@2285f28b
+2023-06-20T00:05:29.492+02:00  INFO 9240 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-06-20T00:05:29.522+02:00  INFO 9240 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-20T00:05:29.525+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:29.525+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "shopping_list_entity_elements" does not exist, skipping
+2023-06-20T00:05:29.529+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:29.529+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity" does not exist, skipping
+2023-06-20T00:05:29.531+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:29.531+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity_elements" does not exist, skipping
+2023-06-20T00:05:29.552+02:00  INFO 9240 --- [    Test worker] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+2023-06-20T00:05:29.553+02:00  INFO 9240 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T00:05:29.715+02:00  WARN 9240 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-20T00:05:29.966+02:00  INFO 9240 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-20T00:05:30.030+02:00  INFO 9240 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 59208 (http) with context path ''
+2023-06-20T00:05:30.045+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Started ShoppingListControllerTest in 1.648 seconds (process running for 42.993)
+2023-06-20T00:05:31.080+02:00  INFO 9240 --- [o-auto-3-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-20T00:05:31.080+02:00  INFO 9240 --- [o-auto-3-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-20T00:05:31.083+02:00  INFO 9240 --- [o-auto-3-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-06-20T00:05:31.239+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-20T00:05:31.240+02:00  INFO 9240 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-20T00:05:33.357+02:00  INFO 9240 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T00:05:33.358+02:00  INFO 9240 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-06-20T00:05:33.371+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-06-20T00:05:33.377+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -186,45 +186,45 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.0)
 
-2023-06-19T23:51:44.794+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Starting ShoppingListControllerTest using Java 17.0.6 with PID 22892 (started by kubas in C:\shoppinglistservice)
-2023-06-19T23:51:44.794+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : No active profile set, falling back to 1 default profile: "default"
-2023-06-19T23:51:45.605+02:00  INFO 22892 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-06-19T23:51:45.629+02:00  INFO 22892 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interfaces.
-2023-06-19T23:51:45.778+02:00  INFO 22892 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-06-19T23:51:45.780+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-06-19T23:51:45.782+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
-2023-06-19T23:51:45.844+02:00  INFO 22892 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-06-19T23:51:45.844+02:00  INFO 22892 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1046 ms
-2023-06-19T23:51:45.937+02:00  INFO 22892 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-06-19T23:51:45.951+02:00  INFO 22892 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-06-19T23:51:45.951+02:00  INFO 22892 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-06-19T23:51:45.953+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
-2023-06-19T23:51:45.982+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@3f34edfc
-2023-06-19T23:51:45.982+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
-2023-06-19T23:51:45.994+02:00  INFO 22892 --- [    Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@2f4daa0c
-2023-06-19T23:51:46.008+02:00  INFO 22892 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-06-19T23:51:46.032+02:00  INFO 22892 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-06-19T23:51:46.036+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:46.036+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "shopping_list_entity_elements" does not exist, skipping
-2023-06-19T23:51:46.038+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:46.039+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity" does not exist, skipping
-2023-06-19T23:51:46.040+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:46.041+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity_elements" does not exist, skipping
-2023-06-19T23:51:46.055+02:00  INFO 22892 --- [    Test worker] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
-2023-06-19T23:51:46.056+02:00  INFO 22892 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-06-19T23:51:46.173+02:00  WARN 22892 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-06-19T23:51:46.616+02:00  INFO 22892 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-06-19T23:51:46.654+02:00  INFO 22892 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 51078 (http) with context path ''
-2023-06-19T23:51:46.664+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Started ShoppingListControllerTest in 1.931 seconds (process running for 35.294)
-2023-06-19T23:51:46.914+02:00  INFO 22892 --- [o-auto-4-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-06-19T23:51:46.914+02:00  INFO 22892 --- [o-auto-4-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-06-19T23:51:46.916+02:00  INFO 22892 --- [o-auto-4-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-06-19T23:51:47.057+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-06-19T23:51:47.058+02:00  INFO 22892 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-06-19T23:51:49.123+02:00  INFO 22892 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-06-19T23:51:49.123+02:00  INFO 22892 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2023-06-19T23:51:49.131+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
-2023-06-19T23:51:49.137+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-06-20T00:05:33.426+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Starting ShoppingListControllerTest using Java 17.0.6 with PID 9240 (started by kubas in C:\shoppinglistservice)
+2023-06-20T00:05:33.427+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2023-06-20T00:05:33.830+02:00  INFO 9240 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-20T00:05:33.847+02:00  INFO 9240 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interfaces.
+2023-06-20T00:05:33.946+02:00  INFO 9240 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-20T00:05:33.947+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-20T00:05:33.947+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-20T00:05:34.010+02:00  INFO 9240 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-20T00:05:34.010+02:00  INFO 9240 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 581 ms
+2023-06-20T00:05:34.114+02:00  INFO 9240 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-20T00:05:34.127+02:00  INFO 9240 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-06-20T00:05:34.127+02:00  INFO 9240 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-20T00:05:34.128+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-06-20T00:05:34.160+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@38f9e69b
+2023-06-20T00:05:34.161+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-06-20T00:05:34.184+02:00  INFO 9240 --- [    Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@128e7fc4
+2023-06-20T00:05:34.206+02:00  INFO 9240 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-06-20T00:05:34.236+02:00  INFO 9240 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-20T00:05:34.239+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:34.239+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "shopping_list_entity_elements" does not exist, skipping
+2023-06-20T00:05:34.242+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:34.242+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity" does not exist, skipping
+2023-06-20T00:05:34.245+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:34.245+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity_elements" does not exist, skipping
+2023-06-20T00:05:34.260+02:00  INFO 9240 --- [    Test worker] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+2023-06-20T00:05:34.261+02:00  INFO 9240 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T00:05:34.373+02:00  WARN 9240 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-20T00:05:34.635+02:00  INFO 9240 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-20T00:05:34.678+02:00  INFO 9240 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 59235 (http) with context path ''
+2023-06-20T00:05:34.701+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Started ShoppingListControllerTest in 1.317 seconds (process running for 47.65)
+2023-06-20T00:05:34.911+02:00  INFO 9240 --- [o-auto-4-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-20T00:05:34.911+02:00  INFO 9240 --- [o-auto-4-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-20T00:05:34.913+02:00  INFO 9240 --- [o-auto-4-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-20T00:05:35.061+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-20T00:05:35.062+02:00  INFO 9240 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-20T00:05:37.164+02:00  INFO 9240 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T00:05:37.164+02:00  INFO 9240 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-06-20T00:05:37.176+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-06-20T00:05:37.268+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -234,45 +234,45 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.0)
 
-2023-06-19T23:51:49.172+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Starting ShoppingListControllerTest using Java 17.0.6 with PID 22892 (started by kubas in C:\shoppinglistservice)
-2023-06-19T23:51:49.173+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : No active profile set, falling back to 1 default profile: "default"
-2023-06-19T23:51:49.506+02:00  INFO 22892 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-06-19T23:51:49.518+02:00  INFO 22892 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interfaces.
-2023-06-19T23:51:49.593+02:00  INFO 22892 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-06-19T23:51:49.594+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-06-19T23:51:49.594+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
-2023-06-19T23:51:49.649+02:00  INFO 22892 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-06-19T23:51:49.649+02:00  INFO 22892 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 474 ms
-2023-06-19T23:51:49.778+02:00  INFO 22892 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-06-19T23:51:49.792+02:00  INFO 22892 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-06-19T23:51:49.792+02:00  INFO 22892 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-06-19T23:51:49.794+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
-2023-06-19T23:51:49.849+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@6cfd694a
-2023-06-19T23:51:49.849+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
-2023-06-19T23:51:49.856+02:00  INFO 22892 --- [    Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@3d562fde
-2023-06-19T23:51:49.872+02:00  INFO 22892 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-06-19T23:51:49.896+02:00  INFO 22892 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-06-19T23:51:49.899+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:49.899+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "shopping_list_entity_elements" does not exist, skipping
-2023-06-19T23:51:49.902+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:49.902+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity" does not exist, skipping
-2023-06-19T23:51:49.904+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:49.905+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity_elements" does not exist, skipping
-2023-06-19T23:51:49.915+02:00  INFO 22892 --- [    Test worker] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
-2023-06-19T23:51:49.916+02:00  INFO 22892 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-06-19T23:51:50.061+02:00  WARN 22892 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-06-19T23:51:50.240+02:00  INFO 22892 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-06-19T23:51:50.270+02:00  INFO 22892 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 51104 (http) with context path ''
-2023-06-19T23:51:50.282+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Started ShoppingListControllerTest in 1.14 seconds (process running for 38.912)
-2023-06-19T23:51:50.413+02:00  INFO 22892 --- [o-auto-5-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-06-19T23:51:50.413+02:00  INFO 22892 --- [o-auto-5-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-06-19T23:51:50.414+02:00  INFO 22892 --- [o-auto-5-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-06-19T23:51:50.571+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-06-19T23:51:50.571+02:00  INFO 22892 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-06-19T23:51:52.644+02:00  INFO 22892 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-06-19T23:51:52.645+02:00  INFO 22892 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2023-06-19T23:51:52.655+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
-2023-06-19T23:51:52.660+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2023-06-20T00:05:37.326+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Starting ShoppingListControllerTest using Java 17.0.6 with PID 9240 (started by kubas in C:\shoppinglistservice)
+2023-06-20T00:05:37.327+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2023-06-20T00:05:38.319+02:00  INFO 9240 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-20T00:05:38.335+02:00  INFO 9240 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interfaces.
+2023-06-20T00:05:38.425+02:00  INFO 9240 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-20T00:05:38.426+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-20T00:05:38.426+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-20T00:05:38.488+02:00  INFO 9240 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-20T00:05:38.489+02:00  INFO 9240 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1159 ms
+2023-06-20T00:05:38.587+02:00  INFO 9240 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-20T00:05:38.602+02:00  INFO 9240 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-06-20T00:05:38.602+02:00  INFO 9240 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-20T00:05:38.605+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2023-06-20T00:05:38.635+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@5407cc39
+2023-06-20T00:05:38.636+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2023-06-20T00:05:38.643+02:00  INFO 9240 --- [    Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@19941818
+2023-06-20T00:05:38.663+02:00  INFO 9240 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-06-20T00:05:38.688+02:00  INFO 9240 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-20T00:05:38.692+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:38.693+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "shopping_list_entity_elements" does not exist, skipping
+2023-06-20T00:05:38.696+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:38.696+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity" does not exist, skipping
+2023-06-20T00:05:38.700+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:38.700+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity_elements" does not exist, skipping
+2023-06-20T00:05:38.715+02:00  INFO 9240 --- [    Test worker] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+2023-06-20T00:05:38.715+02:00  INFO 9240 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T00:05:38.829+02:00  WARN 9240 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-20T00:05:39.016+02:00  INFO 9240 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-20T00:05:39.048+02:00  INFO 9240 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 59266 (http) with context path ''
+2023-06-20T00:05:39.063+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Started ShoppingListControllerTest in 1.79 seconds (process running for 52.011)
+2023-06-20T00:05:39.199+02:00  INFO 9240 --- [o-auto-5-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-20T00:05:39.200+02:00  INFO 9240 --- [o-auto-5-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-20T00:05:39.201+02:00  INFO 9240 --- [o-auto-5-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-20T00:05:39.350+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-20T00:05:39.351+02:00  INFO 9240 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-20T00:05:41.429+02:00  INFO 9240 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T00:05:41.429+02:00  INFO 9240 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-06-20T00:05:41.446+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2023-06-20T00:05:41.452+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -282,45 +282,45 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.0)
 
-2023-06-19T23:51:52.697+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Starting ShoppingListControllerTest using Java 17.0.6 with PID 22892 (started by kubas in C:\shoppinglistservice)
-2023-06-19T23:51:52.697+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : No active profile set, falling back to 1 default profile: "default"
-2023-06-19T23:51:53.017+02:00  INFO 22892 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-06-19T23:51:53.027+02:00  INFO 22892 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interfaces.
-2023-06-19T23:51:53.100+02:00  INFO 22892 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-06-19T23:51:53.101+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-06-19T23:51:53.101+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
-2023-06-19T23:51:53.149+02:00  INFO 22892 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-06-19T23:51:53.150+02:00  INFO 22892 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 450 ms
-2023-06-19T23:51:53.216+02:00  INFO 22892 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-06-19T23:51:53.230+02:00  INFO 22892 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-06-19T23:51:53.230+02:00  INFO 22892 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-06-19T23:51:53.231+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
-2023-06-19T23:51:53.253+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection org.postgresql.jdbc.PgConnection@23e1dd4a
-2023-06-19T23:51:53.254+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
-2023-06-19T23:51:53.260+02:00  INFO 22892 --- [    Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@2d3b13b8
-2023-06-19T23:51:53.275+02:00  INFO 22892 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-06-19T23:51:53.296+02:00  INFO 22892 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-06-19T23:51:53.299+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:53.299+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "shopping_list_entity_elements" does not exist, skipping
-2023-06-19T23:51:53.301+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:53.302+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity" does not exist, skipping
-2023-06-19T23:51:53.304+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:53.304+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity_elements" does not exist, skipping
-2023-06-19T23:51:53.324+02:00  INFO 22892 --- [    Test worker] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
-2023-06-19T23:51:53.324+02:00  INFO 22892 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-06-19T23:51:53.404+02:00  WARN 22892 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-06-19T23:51:53.566+02:00  INFO 22892 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-06-19T23:51:53.592+02:00  INFO 22892 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 51135 (http) with context path ''
-2023-06-19T23:51:53.612+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Started ShoppingListControllerTest in 0.947 seconds (process running for 42.242)
-2023-06-19T23:51:53.747+02:00  INFO 22892 --- [o-auto-6-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-06-19T23:51:53.748+02:00  INFO 22892 --- [o-auto-6-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-06-19T23:51:53.749+02:00  INFO 22892 --- [o-auto-6-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-06-19T23:51:53.784+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-06-19T23:51:53.785+02:00  INFO 22892 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-06-19T23:51:55.848+02:00  INFO 22892 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-06-19T23:51:55.848+02:00  INFO 22892 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2023-06-19T23:51:55.858+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
-2023-06-19T23:51:55.862+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2023-06-20T00:05:41.498+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Starting ShoppingListControllerTest using Java 17.0.6 with PID 9240 (started by kubas in C:\shoppinglistservice)
+2023-06-20T00:05:41.499+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2023-06-20T00:05:42.034+02:00  INFO 9240 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-20T00:05:42.048+02:00  INFO 9240 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interfaces.
+2023-06-20T00:05:42.187+02:00  INFO 9240 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-20T00:05:42.188+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-20T00:05:42.189+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-20T00:05:42.347+02:00  INFO 9240 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-20T00:05:42.347+02:00  INFO 9240 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 846 ms
+2023-06-20T00:05:42.458+02:00  INFO 9240 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-20T00:05:42.475+02:00  INFO 9240 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-06-20T00:05:42.476+02:00  INFO 9240 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-20T00:05:42.478+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2023-06-20T00:05:42.583+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection org.postgresql.jdbc.PgConnection@2adeb7e3
+2023-06-20T00:05:42.583+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2023-06-20T00:05:42.592+02:00  INFO 9240 --- [    Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@5b67d66c
+2023-06-20T00:05:42.607+02:00  INFO 9240 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-06-20T00:05:42.629+02:00  INFO 9240 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-20T00:05:42.632+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:42.632+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "shopping_list_entity_elements" does not exist, skipping
+2023-06-20T00:05:42.634+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:42.635+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity" does not exist, skipping
+2023-06-20T00:05:42.636+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:42.637+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity_elements" does not exist, skipping
+2023-06-20T00:05:42.717+02:00  INFO 9240 --- [    Test worker] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+2023-06-20T00:05:42.718+02:00  INFO 9240 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T00:05:42.803+02:00  WARN 9240 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-20T00:05:42.996+02:00  INFO 9240 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-20T00:05:43.036+02:00  INFO 9240 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 59293 (http) with context path ''
+2023-06-20T00:05:43.066+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Started ShoppingListControllerTest in 1.61 seconds (process running for 56.014)
+2023-06-20T00:05:43.313+02:00  INFO 9240 --- [o-auto-6-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-20T00:05:43.313+02:00  INFO 9240 --- [o-auto-6-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-20T00:05:43.314+02:00  INFO 9240 --- [o-auto-6-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-20T00:05:43.372+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-20T00:05:43.373+02:00  INFO 9240 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-20T00:05:45.465+02:00  INFO 9240 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T00:05:45.466+02:00  INFO 9240 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-06-20T00:05:45.486+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2023-06-20T00:05:45.494+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -330,45 +330,45 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.0)
 
-2023-06-19T23:51:55.895+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Starting ShoppingListControllerTest using Java 17.0.6 with PID 22892 (started by kubas in C:\shoppinglistservice)
-2023-06-19T23:51:55.895+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : No active profile set, falling back to 1 default profile: "default"
-2023-06-19T23:51:56.271+02:00  INFO 22892 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-06-19T23:51:56.283+02:00  INFO 22892 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interfaces.
-2023-06-19T23:51:56.366+02:00  INFO 22892 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-06-19T23:51:56.367+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-06-19T23:51:56.368+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
-2023-06-19T23:51:56.419+02:00  INFO 22892 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-06-19T23:51:56.420+02:00  INFO 22892 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 522 ms
-2023-06-19T23:51:56.515+02:00  INFO 22892 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-06-19T23:51:56.530+02:00  INFO 22892 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-06-19T23:51:56.531+02:00  INFO 22892 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-06-19T23:51:56.533+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
-2023-06-19T23:51:56.577+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection org.postgresql.jdbc.PgConnection@447b3e43
-2023-06-19T23:51:56.577+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
-2023-06-19T23:51:56.584+02:00  INFO 22892 --- [    Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@49b71061
-2023-06-19T23:51:56.619+02:00  INFO 22892 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-06-19T23:51:56.647+02:00  INFO 22892 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-06-19T23:51:56.650+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:56.651+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "shopping_list_entity_elements" does not exist, skipping
-2023-06-19T23:51:56.654+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:56.654+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity" does not exist, skipping
-2023-06-19T23:51:56.656+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:51:56.656+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity_elements" does not exist, skipping
-2023-06-19T23:51:56.674+02:00  INFO 22892 --- [    Test worker] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
-2023-06-19T23:51:56.674+02:00  INFO 22892 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-06-19T23:51:56.791+02:00  WARN 22892 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-06-19T23:51:57.006+02:00  INFO 22892 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-06-19T23:51:57.045+02:00  INFO 22892 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 51163 (http) with context path ''
-2023-06-19T23:51:57.064+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Started ShoppingListControllerTest in 1.198 seconds (process running for 45.694)
-2023-06-19T23:51:57.255+02:00  INFO 22892 --- [o-auto-7-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-06-19T23:51:57.255+02:00  INFO 22892 --- [o-auto-7-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-06-19T23:51:57.256+02:00  INFO 22892 --- [o-auto-7-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-06-19T23:51:57.337+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-06-19T23:51:57.337+02:00  INFO 22892 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-06-19T23:51:59.404+02:00  INFO 22892 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-06-19T23:51:59.404+02:00  INFO 22892 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2023-06-19T23:51:59.410+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
-2023-06-19T23:51:59.413+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2023-06-20T00:05:45.538+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Starting ShoppingListControllerTest using Java 17.0.6 with PID 9240 (started by kubas in C:\shoppinglistservice)
+2023-06-20T00:05:45.538+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2023-06-20T00:05:46.121+02:00  INFO 9240 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-20T00:05:46.133+02:00  INFO 9240 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interfaces.
+2023-06-20T00:05:46.264+02:00  INFO 9240 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-20T00:05:46.265+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-20T00:05:46.265+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-20T00:05:46.319+02:00  INFO 9240 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-20T00:05:46.319+02:00  INFO 9240 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 777 ms
+2023-06-20T00:05:46.400+02:00  INFO 9240 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-20T00:05:46.414+02:00  INFO 9240 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-06-20T00:05:46.414+02:00  INFO 9240 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-20T00:05:46.415+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2023-06-20T00:05:46.448+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection org.postgresql.jdbc.PgConnection@20b6b918
+2023-06-20T00:05:46.448+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2023-06-20T00:05:46.456+02:00  INFO 9240 --- [    Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@1faf3286
+2023-06-20T00:05:46.470+02:00  INFO 9240 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-06-20T00:05:46.488+02:00  INFO 9240 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-20T00:05:46.498+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:46.498+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "shopping_list_entity_elements" does not exist, skipping
+2023-06-20T00:05:46.500+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:46.500+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity" does not exist, skipping
+2023-06-20T00:05:46.502+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:46.502+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity_elements" does not exist, skipping
+2023-06-20T00:05:46.513+02:00  INFO 9240 --- [    Test worker] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+2023-06-20T00:05:46.514+02:00  INFO 9240 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T00:05:46.610+02:00  WARN 9240 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-20T00:05:46.785+02:00  INFO 9240 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-20T00:05:46.819+02:00  INFO 9240 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 59317 (http) with context path ''
+2023-06-20T00:05:46.827+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Started ShoppingListControllerTest in 1.329 seconds (process running for 59.776)
+2023-06-20T00:05:46.965+02:00  INFO 9240 --- [o-auto-7-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-20T00:05:46.966+02:00  INFO 9240 --- [o-auto-7-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-20T00:05:46.968+02:00  INFO 9240 --- [o-auto-7-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-20T00:05:47.039+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-20T00:05:47.039+02:00  INFO 9240 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-20T00:05:49.120+02:00  INFO 9240 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T00:05:49.120+02:00  INFO 9240 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-06-20T00:05:49.131+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2023-06-20T00:05:49.143+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -378,45 +378,45 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.0)
 
-2023-06-19T23:51:59.440+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Starting ShoppingListControllerTest using Java 17.0.6 with PID 22892 (started by kubas in C:\shoppinglistservice)
-2023-06-19T23:51:59.440+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : No active profile set, falling back to 1 default profile: "default"
-2023-06-19T23:51:59.905+02:00  INFO 22892 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-06-19T23:51:59.917+02:00  INFO 22892 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interfaces.
-2023-06-19T23:52:00.011+02:00  INFO 22892 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-06-19T23:52:00.012+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-06-19T23:52:00.012+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
-2023-06-19T23:52:00.113+02:00  INFO 22892 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-06-19T23:52:00.113+02:00  INFO 22892 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 671 ms
-2023-06-19T23:52:00.332+02:00  INFO 22892 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-06-19T23:52:00.365+02:00  INFO 22892 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-06-19T23:52:00.365+02:00  INFO 22892 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-06-19T23:52:00.367+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
-2023-06-19T23:52:00.465+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection org.postgresql.jdbc.PgConnection@6813ed1e
-2023-06-19T23:52:00.465+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
-2023-06-19T23:52:00.471+02:00  INFO 22892 --- [    Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@59108fbf
-2023-06-19T23:52:00.493+02:00  INFO 22892 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-06-19T23:52:00.575+02:00  INFO 22892 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-06-19T23:52:00.624+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:52:00.624+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "shopping_list_entity_elements" does not exist, skipping
-2023-06-19T23:52:00.696+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:52:00.696+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity" does not exist, skipping
-2023-06-19T23:52:00.874+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-06-19T23:52:00.874+02:00  WARN 22892 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity_elements" does not exist, skipping
-2023-06-19T23:52:00.993+02:00  INFO 22892 --- [    Test worker] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
-2023-06-19T23:52:00.994+02:00  INFO 22892 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-06-19T23:52:02.104+02:00  WARN 22892 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-06-19T23:52:02.244+02:00  INFO 22892 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-06-19T23:52:02.265+02:00  INFO 22892 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 51195 (http) with context path ''
-2023-06-19T23:52:02.272+02:00  INFO 22892 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Started ShoppingListControllerTest in 2.856 seconds (process running for 50.902)
-2023-06-19T23:52:02.526+02:00  INFO 22892 --- [o-auto-8-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-06-19T23:52:02.527+02:00  INFO 22892 --- [o-auto-8-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-06-19T23:52:02.528+02:00  INFO 22892 --- [o-auto-8-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-06-19T23:52:03.056+02:00  INFO 22892 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-06-19T23:52:03.057+02:00  INFO 22892 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-06-19T23:52:05.139+02:00  INFO 22892 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-06-19T23:52:05.139+02:00  INFO 22892 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2023-06-19T23:52:05.149+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
-2023-06-19T23:52:05.160+02:00  INFO 22892 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2023-06-20T00:05:49.189+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Starting ShoppingListControllerTest using Java 17.0.6 with PID 9240 (started by kubas in C:\shoppinglistservice)
+2023-06-20T00:05:49.189+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2023-06-20T00:05:49.758+02:00  INFO 9240 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-20T00:05:49.768+02:00  INFO 9240 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interfaces.
+2023-06-20T00:05:49.899+02:00  INFO 9240 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-20T00:05:49.901+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-20T00:05:49.901+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-20T00:05:49.979+02:00  INFO 9240 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-20T00:05:49.980+02:00  INFO 9240 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 788 ms
+2023-06-20T00:05:50.102+02:00  INFO 9240 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-20T00:05:50.119+02:00  INFO 9240 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-06-20T00:05:50.120+02:00  INFO 9240 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-20T00:05:50.121+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2023-06-20T00:05:50.157+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection org.postgresql.jdbc.PgConnection@71e1c7fc
+2023-06-20T00:05:50.158+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2023-06-20T00:05:50.180+02:00  INFO 9240 --- [    Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@84b0639
+2023-06-20T00:05:50.197+02:00  INFO 9240 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-06-20T00:05:50.222+02:00  INFO 9240 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-20T00:05:50.226+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:50.226+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "shopping_list_entity_elements" does not exist, skipping
+2023-06-20T00:05:50.228+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:50.229+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity" does not exist, skipping
+2023-06-20T00:05:50.231+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-06-20T00:05:50.231+02:00  WARN 9240 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "shopping_list_entity_elements" does not exist, skipping
+2023-06-20T00:05:50.242+02:00  INFO 9240 --- [    Test worker] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+2023-06-20T00:05:50.242+02:00  INFO 9240 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T00:05:50.339+02:00  WARN 9240 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-20T00:05:50.532+02:00  INFO 9240 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-20T00:05:50.559+02:00  INFO 9240 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 59345 (http) with context path ''
+2023-06-20T00:05:50.580+02:00  INFO 9240 --- [    Test worker] c.s.s.c.ShoppingListControllerTest       : Started ShoppingListControllerTest in 1.433 seconds (process running for 63.528)
+2023-06-20T00:05:50.756+02:00  INFO 9240 --- [o-auto-8-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-20T00:05:50.756+02:00  INFO 9240 --- [o-auto-8-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-20T00:05:50.757+02:00  INFO 9240 --- [o-auto-8-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-20T00:05:51.030+02:00  INFO 9240 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-20T00:05:51.031+02:00  INFO 9240 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-20T00:05:53.131+02:00  INFO 9240 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T00:05:53.131+02:00  INFO 9240 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-06-20T00:05:53.155+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2023-06-20T00:05:53.170+02:00  INFO 9240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
