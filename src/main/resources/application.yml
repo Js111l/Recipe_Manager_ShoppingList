@@ -11,3 +11,6 @@ management:
     web:
       exposure:
         include: metrics
+springdoc:
+  swagger-ui:
+    path: /swagger-ui-doc.html
