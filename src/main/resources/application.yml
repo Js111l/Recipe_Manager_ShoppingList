@@ -3,14 +3,9 @@ spring:
     hibernate:
       ddl-auto: create-drop
   datasource:
-    url: ${DB_URL}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
-management:
-  endpoints:
-    web:
-      exposure:
-        include: metrics
+    url: jdbc:postgresql://localhost:5433/shopping_list_db
+    username: admin
+    password: qwerty
 springdoc:
   swagger-ui:
     path: /swagger-ui-doc.html
